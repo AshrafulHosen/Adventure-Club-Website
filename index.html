@@ -14,28 +14,29 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#home">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">AH</span>
           <span>Adventure Horizons BD</span>
         </a>
 
         <nav aria-label="Main navigation">
           <ul class="nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#regions">Regions</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#membership">Membership</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="regions.html">Regions</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
     <main>
       <section id="home" class="hero">
         <div class="hero-overlay"></div>
@@ -46,8 +47,8 @@
             Adventure Horizons BD unites adventure seekers across all of Bangladesh—from the hills of Sylhet to the beaches of Cox's Bazar, from the Sundarbans mangroves to the rivers of the delta. We organize diverse expeditions including hiking, trekking, coastal camping, water navigation, island exploration, and more across all regions of the country.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#membership">Become a Member</a>
-            <a class="btn btn-secondary" href="#events">View Upcoming Trips</a>
+            <a class="btn btn-primary" href="membership.html">Become a Member</a>
+            <a class="btn btn-secondary" href="events.html">View Upcoming Trips</a>
           </div>
           <div class="hero-stats" aria-label="Club highlights">
             <div>
@@ -64,229 +65,202 @@
             </div>
           </div>
         </div>
-        <aside class="hero-panel" aria-label="Featured expedition panel">
-          <p class="panel-label">Featured route</p>
-          <h2>Bay of Bengal Weekend</h2>
-          <p>
-            A guided shoreline journey with tide-safe planning, local food stops,
-            and sunset photography.
-          </p>
-          <ul class="panel-list">
-            <li>2-day coastal expedition</li>
-            <li>Boat transfer and camp setup</li>
-            <li>Safety briefing included</li>
-          </ul>
-        </aside>
       </section>
 
-      <section id="about" class="section">
-        <div class="container split-layout">
-          <div>
-            <p class="eyebrow">About the Club</p>
-            <h2>Our Mission</h2>
-            <p>
-              Our mission is to create safe, responsible, and exciting maritime-inspired
-              adventures for people of all skill levels. We believe exploration builds
-              confidence, strengthens community, and deepens respect for Bangladesh's rivers
-              and coastline.
-            </p>
-            <p>
-              From the Sundarbans to Cox's Bazar and across the river routes of the delta,
-              we organize meaningful expeditions that combine exploration, learning, and teamwork.
-            </p>
-          </div>
-          <div class="info-cards" aria-label="Club values">
-            <article class="card">
-              <h3>Safety First</h3>
-              <p>Guided plans, tide checks, trained leads, and practical checklists on every trip.</p>
+      <section class="section why-section" style="background: linear-gradient(135deg, rgba(61, 182, 214, 0.08), rgba(243, 177, 77, 0.08));">
+        <div class="container">
+          <p class="eyebrow">Why Choose Us</p>
+          <h2>The Adventure Horizons Difference</h2>
+          <div class="why-grid">
+            <article class="why-card">
+              <div class="why-icon">🏆</div>
+              <h3>Expert Leadership</h3>
+              <p>Experienced guides with deep knowledge of Bangladesh's geography, culture, and ecosystems.</p>
             </article>
-            <article class="card">
-              <h3>Eco Friendly</h3>
-              <p>Leave-no-trace values to protect coasts, islands, mangroves, and rivers for everyone.</p>
+            <article class="why-card">
+              <div class="why-icon">🛡️</div>
+              <h3>Safety Certified</h3>
+              <p>All expeditions follow international safety standards with emergency protocols and trained guides.</p>
             </article>
-            <article class="card">
-              <h3>Inclusive Community</h3>
-              <p>Welcoming students, professionals, and families who love the water and the outdoors.</p>
+            <article class="why-card">
+              <div class="why-icon">🌿</div>
+              <h3>Eco Conscious</h3>
+              <p>Leave-no-trace practices to preserve Bangladesh's natural beauty for future generations.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon">👥</div>
+              <h3>Community Focused</h3>
+              <p>Build lasting friendships with adventurers across all experience levels and backgrounds.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon">💰</div>
+              <h3>Affordable Pricing</h3>
+              <p>Flexible membership plans designed for students, professionals, and families.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon">🗺️</div>
+              <h3>Diverse Routes</h3>
+              <p>Adventures across all regions—from mountains to beaches to river deltas.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="regions" class="section">
+      <section class="section featured-destinations">
         <div class="container">
           <p class="eyebrow">Explore Bangladesh</p>
-          <h2>Adventure Regions Across the Country</h2>
-          <div class="regions-grid">
-            <article class="region-card">
-              <h3>North Bengal</h3>
-              <p><strong>Highlights:</strong> Hill treks, tea gardens, bamboo forests</p>
-              <p>Explore Sylhet's tea estates, Jaintia Hills, and hidden waterfalls. Perfect for trekking and nature photography.</p>
-              <p class="region-trips">Popular trips: Jaflong Trek, Ratargul Swamp Expedition</p>
-            </article>
-            <article class="region-card">
-              <h3>Southeast Coast</h3>
-              <p><strong>Highlights:</strong> Sandy beaches, coral islands, water activities</p>
-              <p>Cox's Bazar, St. Martin's Island, and Teknaf offer pristine beaches and island exploration. Ideal for coastal camps.</p>
-              <p class="region-trips">Popular trips: Teknaf Beach Camp, St. Martin's Island Tour</p>
-            </article>
-            <article class="region-card">
-              <h3>Sundarbans Region</h3>
-              <p><strong>Highlights:</strong> Mangroves, river routes, wildlife viewing</p>
-              <p>The world's largest mangrove forest offers eco-cruises, boat expeditions, and unique ecosystem exploration.</p>
-              <p class="region-trips">Popular trips: Sundarbans Eco-Cruise, Tiger Reserve Journey</p>
-            </article>
-            <article class="region-card">
-              <h3>Central Bangladesh</h3>
-              <p><strong>Highlights:</strong> River systems, pastoral villages, cultural sites</p>
-              <p>Navigate the Meghna and Padma rivers, explore village life, and discover ancient historical monuments.</p>
-              <p class="region-trips">Popular trips: Padma River Navigation, Rural Village Tours</p>
-            </article>
-            <article class="region-card">
-              <h3>Northwest Region</h3>
-              <p><strong>Highlights:</strong> Ancient ruins, agricultural lands, seasonal wetlands</p>
-              <p>Bogra, Naogaon, and Rajshahi offer historical exploration and seasonal bird-watching adventures.</p>
-              <p class="region-trips">Popular trips: Historical Route Trek, Seasonal Wetland Safari</p>
-            </article>
-            <article class="region-card">
-              <h3>Eastern Hills</h3>
-              <p><strong>Highlights:</strong> Mountain terrain, tribal villages, scenic landscapes</p>
-              <p>Chittagong Hill Tracts present challenging treks, cultural encounters, and pristine natural beauty.</p>
-              <p class="region-trips">Popular trips: Hill Tract Trek, Kaptai Lake Expedition</p>
-            </article>
+          <h2>Featured Destinations</h2>
+          <div class="destinations-grid">
+            <div class="destination-card">
+              <div class="destination-header">🏔️</div>
+              <h3>Sylhet Hills</h3>
+              <p>Tea gardens, waterfalls, and lush landscapes</p>
+              <a href="regions.html" class="explore-link">Explore →</a>
+            </div>
+            <div class="destination-card">
+              <div class="destination-header">🏖️</div>
+              <h3>Cox's Bazar Coast</h3>
+              <p>Longest beach with pristine waters and islands</p>
+              <a href="regions.html" class="explore-link">Explore →</a>
+            </div>
+            <div class="destination-card">
+              <div class="destination-header">🌳</div>
+              <h3>Sundarbans</h3>
+              <p>Mangrove forest and unmatched biodiversity</p>
+              <a href="regions.html" class="explore-link">Explore →</a>
+            </div>
+            <div class="destination-card">
+              <div class="destination-header">💧</div>
+              <h3>River Deltas</h3>
+              <p>Historic waterways and pastoral villages</p>
+              <a href="regions.html" class="explore-link">Explore →</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="events" class="section section-muted">
+      <section class="section how-it-works-section" style="background: linear-gradient(135deg, rgba(61, 182, 214, 0.06), rgba(243, 177, 77, 0.06));">
         <div class="container">
-          <p class="eyebrow">Upcoming Expeditions</p>
-          <h2>Trips and Activities</h2>
-          <div class="grid-events-expanded">
-            <article class="event-card">
-              <p class="event-date">May 3-4, 2026</p>
-              <h3>Teknaf Coastal Camp</h3>
-              <p><strong>Region:</strong> Southeast Coast | 2 days</p>
-              <p>Two-day shoreline camp with beach walk planning, night sky viewing, and group meals.</p>
-            </article>
-            <article class="event-card">
-              <p class="event-date">May 10-12, 2026</p>
-              <h3>Sylhet Tea Garden Trek</h3>
-              <p><strong>Region:</strong> North Bengal | 3 days</p>
-              <p>Guided trek through tea gardens and waterfalls in Sylhet with local homestay experience.</p>
-            </article>
-            <article class="event-card">
-              <p class="event-date">May 18, 2026</p>
-              <h3>River Navigation Workshop</h3>
-              <p><strong>Region:</strong> Central Bangladesh | 1 day</p>
-              <p>Beginner-friendly route reading, knot practice, and safety training near Dhaka rivers.</p>
-            </article>
-            <article class="event-card">
-              <p class="event-date">May 25-28, 2026</p>
-              <h3>Kaptai Lake Expedition</h3>
-              <p><strong>Region:</strong> Eastern Hills | 4 days</p>
-              <p>Multi-day lake and mountain exploration with camping and hiking in the Chittagong Hill Tracts.</p>
-            </article>
-            <article class="event-card">
-              <p class="event-date">June 7-9, 2026</p>
-              <h3>Sundarbans Eco-Cruise</h3>
-              <p><strong>Region:</strong> Sundarbans | 3 days</p>
-              <p>Guided eco-cruise through mangrove channels with birdwatching and field research activities.</p>
-            </article>
-            <article class="event-card">
-              <p class="event-date">June 14-16, 2026</p>
-              <h3>St. Martin's Island Tour</h3>
-              <p><strong>Region:</strong> Southeast Coast | 3 days</p>
-              <p>Island camping and snorkeling adventure to Bangladesh's only coral island with pristine waters.</p>
-            </article>
+          <p class="eyebrow">Getting Started</p>
+          <h2>How It Works</h2>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>Browse Adventures</h3>
+              <p>Explore our upcoming expeditions across all regions with detailed descriptions.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>Choose Your Trip</h3>
+              <p>Pick an adventure that matches your interests, skill level, and schedule.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>Complete Registration</h3>
+              <p>Join our membership and fill out your profile with health and preference information.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">4</div>
+              <h3>Prepare & Depart</h3>
+              <p>Get pre-trip guidance, equipment list, and meet your team before adventure begins.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="gallery" class="section">
+      <section class="section testimonials-section">
         <div class="container">
-          <p class="eyebrow">Past Expeditions</p>
-          <h2>Photo Gallery</h2>
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <img alt="image 1"/>
-            </figure>
-            <figure class="gallery-item">
-              <img alt="image 2"/>
-            </figure>
-            <figure class="gallery-item">
-              <img alt="image 3"/>
-            </figure>
-            <figure class="gallery-item">
-              <img alt="image 4"/>
-            </figure>
-            <figure class="gallery-item">
-              <img alt="image 5"/>
-            </figure>
-            <figure class="gallery-item">
-              <img alt="image 6"/>
-            </figure>
+          <p class="eyebrow">Community Voices</p>
+          <h2>What Adventurers Say</h2>
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <p class="quote">"Adventure Horizons BD completely changed how I experience Bangladesh. The guides are knowledgeable, the communities are welcoming, and every trip is unforgettable!"</p>
+              <p class="author">— Sarah M., Dhaka</p>
+            </article>
+            <article class="testimonial-card">
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <p class="quote">"As a beginner, I was nervous about joining. But the team was so supportive and patient. Now I've completed 5 expeditions and made lifelong friends!"</p>
+              <p class="author">— Rahman K., Chittagong</p>
+            </article>
+            <article class="testimonial-card">
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <p class="quote">"The eco-friendly approach and safety protocols give me confidence. Best adventure club I've ever been part of. Highly recommended!"</p>
+              <p class="author">— Aisha L., Sylhet</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="membership" class="section section-muted">
-        <div class="container split-layout">
-          <div>
-            <p class="eyebrow">Membership</p>
-            <h2>Become Part of the Expedition</h2>
-            <p>
-                Whether you're a complete beginner or an experienced explorer, our plans are designed to help you learn, grow, and enjoy the waterways and coast.
+      <section class="section cta-section" style="background: linear-gradient(130deg, #0e7a5f 0%, #3db6d6 100%); color: white;">
+        <div class="container">
+          <div style="text-align: center;">
+            <p class="eyebrow" style="color: #f3b14d;">Ready for Your Adventure?</p>
+            <h2 style="color: white;">Start Your Journey Today</h2>
+            <p style="color: rgba(255, 255, 255, 0.9); max-width: 600px; margin: 1rem auto 2rem;">
+              Join hundreds of adventurers exploring the natural beauty of Bangladesh. Choose your first expedition and become part of our vibrant community.
             </p>
-            <ul class="benefits">
-                <li>Access to monthly guided trips and workshops</li>
-              <li>Priority registration for limited-seat events</li>
-              <li>Safety and outdoor skills training</li>
-              <li>Community meetups and volunteer opportunities</li>
-            </ul>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a class="btn btn-primary" href="events.html" style="background: #f3b14d; color: #061723;">View Upcoming Trips</a>
+              <a class="btn btn-secondary" href="contact.html" style="border-color: white; color: white;">Get in Touch</a>
+            </div>
           </div>
-          <article class="pricing-card" aria-label="Membership plans">
-            <h3>Membership Plans</h3>
-            <p><strong>Student:</strong> 500 BDT / month</p>
-            <p><strong>Regular:</strong> 800 BDT / month</p>
-            <p><strong>Family:</strong> 1500 BDT / month</p>
-            <a class="btn btn-primary" href="#contact">Apply Now</a>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container">
-          <p class="eyebrow">Get In Touch</p>
-          <h2>Contact Us</h2>
-          <form class="contact-form" action="#" method="post">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" required />
-
-            <label for="email">Email Address</label>
-            <input id="email" name="email" type="email" required />
-
-            <label for="interest">Interested In</label>
-            <select id="interest" name="interest" required>
-              <option value="">Select an option</option>
-              <option value="hiking">Hiking</option>
-              <option value="camping">Camping</option>
-              <option value="cycling">Cycling</option>
-              <option value="membership">Membership Information</option>
-            </select>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button class="btn btn-primary" type="submit">Send Message</button>
-          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p>Adventure Horizons BD</p>
-        <p>Email: adventurehorizonsbd.com | Phone: +880 ###########</p>
+      <div class="container">
+        <div class="footer-grid">
+          <section class="footer-column">
+            <h3>Adventure Horizons BD</h3>
+            <p>Uniting adventurers across Bangladesh to explore rivers, coasts, hills, and mountains through safe, eco-friendly expeditions.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="Twitter">𝕏</a>
+              <a href="#" aria-label="YouTube">▶</a>
+            </div>
+          </section>
+
+          <section class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="regions.html">Explore Regions</a></li>
+              <li><a href="events.html">Upcoming Trips</a></li>
+              <li><a href="membership.html">Membership</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h3>Popular Regions</h3>
+            <ul>
+              <li><a href="regions.html">Sylhet Tea Gardens</a></li>
+              <li><a href="regions.html">Cox's Bazar Beaches</a></li>
+              <li><a href="regions.html">Sundarbans Mangroves</a></li>
+              <li><a href="regions.html">Chittagong Hills</a></li>
+              <li><a href="regions.html">River Expeditions</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h3>Contact & Support</h3>
+            <p><strong>Email:</strong><br>hello@adventurehorizonsbd.com</p>
+            <p><strong>Phone:</strong><br>+880 1880-123456</p>
+            <p><strong>Office:</strong><br>Dhaka, Bangladesh</p>
+          </section>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Adventure Horizons BD. All rights reserved.</p>
+          <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Safety Guidelines</a>
+          </p>
+        </div>
       </div>
     </footer>
   </body>
