@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Adventure Horizons BD - get in touch for questions about expeditions and trips." />
+    <title>Contact - Adventure Horizons BD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">AH</span>
+          <span>Adventure Horizons BD</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="regions.html">Regions</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" style="padding-top: 5rem;">
+        <div class="container">
+          <p class="eyebrow">Get In Touch</p>
+          <h2>Contact Us</h2>
+          <p style="color: var(--muted); margin-bottom: 2rem; max-width: 600px;">
+            Have questions about our expeditions or want to join Adventure Horizons BD? Fill out the form below or reach out directly using the contact information provided.
+          </p>
+          <form class="contact-form" action="#" method="post">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+880" />
+
+            <label for="interest">Interested In</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select an option</option>
+              <option value="hiking">Hiking & Trekking</option>
+              <option value="camping">Coastal Camping</option>
+              <option value="river">River Expeditions</option>
+              <option value="island">Island Tours</option>
+              <option value="membership">Membership Information</option>
+              <option value="other">Other Inquiry</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us about your adventure interests..." required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+
+          <div class="contact-info" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(184, 201, 212, 0.12);">
+            <div>
+              <h3 style="color: #fff; margin-bottom: 0.8rem;">📧 Email</h3>
+              <p style="color: var(--muted);">hello@adventurehorizonsbd.com</p>
+            </div>
+            <div>
+              <h3 style="color: #fff; margin-bottom: 0.8rem;">📱 Phone</h3>
+              <p style="color: var(--muted);">+880 1880-123456</p>
+            </div>
+            <div>
+              <h3 style="color: #fff; margin-bottom: 0.8rem;">📍 Office</h3>
+              <p style="color: var(--muted);">Dhaka, Bangladesh</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <section class="footer-column">
+            <h3>Adventure Horizons BD</h3>
+            <p>Uniting adventurers across Bangladesh to explore rivers, coasts, hills, and mountains through safe, eco-friendly expeditions.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="Twitter">𝕏</a>
+              <a href="#" aria-label="YouTube">▶</a>
+            </div>
+          </section>
+
+          <section class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="regions.html">Explore Regions</a></li>
+              <li><a href="events.html">Upcoming Trips</a></li>
+              <li><a href="membership.html">Membership</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h3>Popular Regions</h3>
+            <ul>
+              <li><a href="regions.html">Sylhet Tea Gardens</a></li>
+              <li><a href="regions.html">Cox's Bazar Beaches</a></li>
+              <li><a href="regions.html">Sundarbans Mangroves</a></li>
+              <li><a href="regions.html">Chittagong Hills</a></li>
+              <li><a href="regions.html">River Expeditions</a></li>
+            </ul>
+          </section>
+
+          <section class="footer-column">
+            <h3>Contact & Support</h3>
+            <p><strong>Email:</strong><br>hello@adventurehorizonsbd.com</p>
+            <p><strong>Phone:</strong><br>+880 1880-123456</p>
+            <p><strong>Office:</strong><br>Dhaka, Bangladesh</p>
+          </section>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Adventure Horizons BD. All rights reserved.</p>
+          <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Safety Guidelines</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
