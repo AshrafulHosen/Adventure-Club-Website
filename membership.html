@@ -30,6 +30,8 @@
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="membership.html">Membership</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="user.html" style="color: var(--accent);">👤 Dashboard</a></li>
+            <li><a href="admin.html" style="color: var(--primary);">🔐 Admin</a></li>
           </ul>
         </nav>
       </div>
@@ -62,10 +64,73 @@
             <p><strong>Student:</strong><br>500 BDT / month<br><small>Perfect for students on a budget</small></p>
             <p><strong>Regular:</strong><br>800 BDT / month<br><small>Full access to all trips and workshops</small></p>
             <p><strong>Family:</strong><br>1500 BDT / month<br><small>Up to 4 family members</small></p>
-            <a class="btn btn-primary" href="contact.html">Apply Now</a>
+            <button class="btn btn-primary" onclick="openMembershipForm()">Apply Now</button>
           </article>
         </div>
       </section>
+
+      <!-- Membership Application Form Section -->
+      <section class="section" style="background: linear-gradient(135deg, rgba(255, 69, 0, 0.05), rgba(255, 179, 0, 0.05));">
+        <div class="container">
+          <p class="eyebrow" style="text-align: center;">Ready to Join?</p>
+          <h2 style="text-align: center;">Apply for Membership</h2>
+          <p style="text-align: center; color: var(--muted); margin-bottom: 2rem;">
+            Fill out the form below to apply for membership. Our admin team will review your application and approve it shortly.
+          </p>
+          
+          <div class="membership-form-container">
+            <form id="membershipApplicationForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="appName">Full Name *</label>
+                  <input type="text" id="appName" placeholder="Your full name" required />
+                </div>
+                
+                <div class="form-group">
+                  <label for="appEmail">Email Address *</label>
+                  <input type="email" id="appEmail" placeholder="your@email.com" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="appPhone">Phone Number *</label>
+                  <input type="tel" id="appPhone" placeholder="+880 1XXX-XXXXXX" required />
+                </div>
+                
+                <div class="form-group">
+                  <label for="appPlan">Select Plan *</label>
+                  <select id="appPlan" required>
+                    <option value="">Choose a membership plan</option>
+                    <option value="Student">Student - 500 BDT/month</option>
+                    <option value="Regular">Regular - 800 BDT/month</option>
+                    <option value="Family">Family - 1500 BDT/month</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="appExperience">Your Adventure Experience *</label>
+                <select id="appExperience" required>
+                  <option value="">Select your experience level</option>
+                  <option value="Beginner">Beginner - First time adventuring</option>
+                  <option value="Intermediate">Intermediate - Some experience</option>
+                  <option value="Advanced">Advanced - Experienced adventurer</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="appMessage">Tell us about yourself (optional)</label>
+                <textarea id="appMessage" placeholder="What adventures are you excited about? Any specific interests?" rows="4"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
+              <p style="text-align: center; color: var(--muted); margin-top: 1rem; font-size: 0.9rem;">
+                ✓ You will receive an email once your membership is approved
+              </p>
+            </form>
+          </div>
+        </div>
     </main>
 
     <footer class="site-footer">

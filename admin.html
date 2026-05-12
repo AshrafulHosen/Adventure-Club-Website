@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Admin Panel - Adventure Horizons BD" />
+    <title>Admin Panel - Adventure Horizons BD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span>Adventure Horizons BD - Admin</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Back to Site</a></li>
+            <li><a href="#" onclick="logout(); return false;">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="admin-container">
+      <!-- Login Form -->
+      <section id="loginSection" class="admin-section login-section">
+        <div class="container">
+          <div class="login-card">
+            <h2>Admin Login</h2>
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="adminPassword">Admin Password:</label>
+                <input type="password" id="adminPassword" placeholder="Enter admin password" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+              <p class="admin-hint">Demo Password: admin123</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Admin Dashboard -->
+      <div id="adminDashboard" class="admin-dashboard hidden">
+        <!-- Navigation Tabs -->
+        <div class="admin-nav">
+          <div class="container">
+            <div class="admin-tabs">
+              <button class="admin-tab active" onclick="switchTab('gallery')">📷 Gallery Management</button>
+              <button class="admin-tab" onclick="switchTab('events')">📅 Events Management</button>
+              <button class="admin-tab" onclick="switchTab('membership')">👥 Membership Approvals</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Management Tab -->
+        <section id="galleryTab" class="admin-tab-content active">
+          <div class="container">
+            <h2>Gallery Management</h2>
+            
+            <div class="admin-panel">
+              <div class="admin-form-section">
+                <h3>Add New Photo</h3>
+                <form id="galleryForm">
+                  <div class="form-group">
+                    <label for="galleryTitle">Photo Title:</label>
+                    <input type="text" id="galleryTitle" placeholder="e.g., Mountain Peak Adventure" required />
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Upload Method:</label>
+                    <div class="upload-method-tabs">
+                      <button type="button" class="upload-method-btn active" onclick="switchUploadMethod('file')">📁 Upload File</button>
+                      <button type="button" class="upload-method-btn" onclick="switchUploadMethod('url')">🔗 Image URL</button>
+                    </div>
+                  </div>
+
+                  <div id="fileUploadMethod" class="upload-method-content active">
+                    <div class="form-group">
+                      <label for="galleryImageFile">Select Image File:</label>
+                      <input type="file" id="galleryImageFile" accept="image/*" />
+                      <small style="color: var(--muted); display: block; margin-top: 0.5rem;">Supported formats: JPG, PNG, GIF, WebP</small>
+                    </div>
+                  </div>
+
+                  <div id="urlUploadMethod" class="upload-method-content">
+                    <div class="form-group">
+                      <label for="galleryImageUrl">Image URL:</label>
+                      <input type="url" id="galleryImageUrl" placeholder="https://example.com/image.jpg" />
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="galleryDescription">Description:</label>
+                    <textarea id="galleryDescription" placeholder="Brief description of the photo" rows="3"></textarea>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Add Photo to Gallery</button>
+                </form>
+              </div>
+
+              <div class="admin-list-section">
+                <h3>Current Gallery Photos</h3>
+                <div id="galleryList" class="admin-items-list">
+                  <p class="no-items">No photos added yet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Events Management Tab -->
+        <section id="eventsTab" class="admin-tab-content">
+          <div class="container">
+            <h2>Events Management</h2>
+            
+            <div class="admin-panel">
+              <div class="admin-form-section">
+                <h3>Add New Event</h3>
+                <form id="eventsForm">
+                  <div class="form-group">
+                    <label for="eventTitle">Event Title:</label>
+                    <input type="text" id="eventTitle" placeholder="e.g., Kaptai Lake Expedition" required />
+                  </div>
+                  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="eventDate">Date(s):</label>
+                      <input type="text" id="eventDate" placeholder="e.g., June 7-9, 2026" required />
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="eventDuration">Duration:</label>
+                      <input type="text" id="eventDuration" placeholder="e.g., 3 days" required />
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="eventRegion">Region:</label>
+                    <input type="text" id="eventRegion" placeholder="e.g., Eastern Hills" required />
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="eventDescription">Description:</label>
+                    <textarea id="eventDescription" placeholder="Event details and itinerary" rows="4" required></textarea>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Add Event</button>
+                </form>
+              </div>
+
+              <div class="admin-list-section">
+                <h3>Current Events</h3>
+                <div id="eventsList" class="admin-items-list">
+                  <p class="no-items">No events added yet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Membership Approvals Tab -->
+        <section id="membershipTab" class="admin-tab-content">
+          <div class="container">
+            <h2>Membership Approvals</h2>
+            <p class="admin-info-note">ℹ️ Members apply through the Membership page. Their applications appear below for approval.</p>
+            
+            <div class="admin-panel">
+              <div class="admin-form-section">
+                <h3>Manually Add Membership (Optional)</h3>
+                <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Use this to manually add members without an application form</p>
+                <form id="membershipForm">
+                  <div class="form-group">
+                    <label for="memberName">Member Name:</label>
+                    <input type="text" id="memberName" placeholder="Full name" required />
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="memberEmail">Email:</label>
+                    <input type="email" id="memberEmail" placeholder="Email address" required />
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="memberPlan">Membership Plan:</label>
+                    <select id="memberPlan" required>
+                      <option value="">Select a plan</option>
+                      <option value="Student">Student - 500 BDT/month</option>
+                      <option value="Regular">Regular - 800 BDT/month</option>
+                      <option value="Family">Family - 1500 BDT/month</option>
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="memberPhone">Phone Number:</label>
+                    <input type="tel" id="memberPhone" placeholder="Phone number" required />
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Submit Membership Request</button>
+                </form>
+              </div>
+
+              <div class="admin-list-section">
+                <h3>Pending Membership Requests</h3>
+                <div id="membershipList" class="admin-items-list">
+                  <p class="no-items">No pending requests</p>
+                </div>
+              </div>
+
+              <div class="admin-list-section" style="margin-top: 2rem;">
+                <h3>Approved Members</h3>
+                <div id="approvedList" class="admin-items-list">
+                  <p class="no-items">No approved members yet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Adventure Horizons BD. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="User Dashboard - Adventure Horizons BD" />
+    <title>User Dashboard - Adventure Horizons BD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span>Adventure Horizons BD - User Dashboard</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Back to Site</a></li>
+            <li><a href="#" onclick="logout(); return false;">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="user-container">
+      <!-- User Login Form -->
+      <section id="userLoginSection" class="user-section login-section">
+        <div class="container">
+          <div class="login-card">
+            <h2>Member Login</h2>
+            <p class="login-subtitle">Login with your email to access member features</p>
+            <form id="userLoginForm">
+              <div class="form-group">
+                <label for="userEmail">Email Address:</label>
+                <input type="email" id="userEmail" placeholder="your@email.com" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+              <p class="login-hint">ℹ️ Only approved members can access this area. Check your approval status in the admin panel.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Dashboard -->
+      <div id="userDashboard" class="user-dashboard hidden">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+          <div class="container">
+            <div class="header-content">
+              <div>
+                <h2>Welcome, <span id="memberName">Member</span>! 👋</h2>
+                <p id="memberStatus" class="member-info">Member since today | Plan: Standard</p>
+              </div>
+              <div class="header-actions">
+                <a href="gallery.html" class="btn btn-secondary">View Gallery</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Navigation Tabs -->
+        <div class="user-nav">
+          <div class="container">
+            <div class="user-tabs">
+              <button class="user-tab active" onclick="switchUserTab('gallery')">📷 Upload Photos</button>
+              <button class="user-tab" onclick="switchUserTab('review')">⭐ Submit Review</button>
+              <button class="user-tab" onclick="switchUserTab('myUploads')">📁 My Uploads</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Upload Tab -->
+        <section id="galleryTab" class="user-tab-content active">
+          <div class="container">
+            <h3>Upload Your Adventure Photos</h3>
+            <p class="section-subtitle">Share your best moments from our expeditions</p>
+            
+            <div class="user-panel">
+              <div class="user-form-section">
+                <form id="userGalleryForm">
+                  <div class="form-group">
+                    <label for="userPhotoTitle">Photo Title:</label>
+                    <input type="text" id="userPhotoTitle" placeholder="e.g., Sunset at Kaptai Lake" required />
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Upload Method:</label>
+                    <div class="upload-method-tabs">
+                      <button type="button" class="upload-method-btn active" onclick="switchUserUploadMethod('file')">📁 Upload File</button>
+                      <button type="button" class="upload-method-btn" onclick="switchUserUploadMethod('url')">🔗 Image URL</button>
+                    </div>
+                  </div>
+
+                  <div id="userFileUploadMethod" class="upload-method-content active">
+                    <div class="form-group">
+                      <label for="userPhotoFile">Select Image File:</label>
+                      <input type="file" id="userPhotoFile" accept="image/*" />
+                      <small style="color: var(--muted); display: block; margin-top: 0.5rem;">Supported formats: JPG, PNG, GIF, WebP (Max 5MB)</small>
+                    </div>
+                  </div>
+
+                  <div id="userUrlUploadMethod" class="upload-method-content">
+                    <div class="form-group">
+                      <label for="userPhotoUrl">Image URL:</label>
+                      <input type="url" id="userPhotoUrl" placeholder="https://example.com/image.jpg" />
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="userPhotoDescription">Description:</label>
+                    <textarea id="userPhotoDescription" placeholder="Share your experience or details about this photo" rows="3"></textarea>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Upload Photo</button>
+                </form>
+              </div>
+
+              <div class="user-info-card">
+                <h4>📸 Photo Guidelines</h4>
+                <ul>
+                  <li>Upload high-quality adventure photos</li>
+                  <li>Include your expedition moments</li>
+                  <li>Add meaningful descriptions</li>
+                  <li>Photos must be original</li>
+                  <li>Keep it family-friendly</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Review Tab -->
+        <section id="reviewTab" class="user-tab-content">
+          <div class="container">
+            <h3>Share Your Experience</h3>
+            <p class="section-subtitle">Tell us about your adventure and help others decide</p>
+            
+            <div class="user-panel">
+              <div class="user-form-section">
+                <form id="userReviewForm">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="reviewEvent">Event/Expedition:</label>
+                      <input type="text" id="reviewEvent" placeholder="e.g., Kaptai Lake Expedition" required />
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="reviewRating">Rating:</label>
+                      <div class="rating-input">
+                        <div class="stars">
+                          <span class="star" onclick="setRating(1)" data-rating="1">★</span>
+                          <span class="star" onclick="setRating(2)" data-rating="2">★</span>
+                          <span class="star" onclick="setRating(3)" data-rating="3">★</span>
+                          <span class="star" onclick="setRating(4)" data-rating="4">★</span>
+                          <span class="star" onclick="setRating(5)" data-rating="5">★</span>
+                        </div>
+                        <input type="hidden" id="reviewRating" value="5" />
+                        <span id="ratingDisplay" class="rating-text">5 Stars</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="reviewTitle">Review Title:</label>
+                    <input type="text" id="reviewTitle" placeholder="e.g., An Unforgettable Adventure!" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="reviewText">Your Review:</label>
+                    <textarea id="reviewText" placeholder="Share your experience, what you loved, and would you recommend it?" rows="5" required></textarea>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+              </div>
+
+              <div class="user-info-card">
+                <h4>⭐ Review Tips</h4>
+                <ul>
+                  <li>Be honest and authentic</li>
+                  <li>Share specific details</li>
+                  <li>Mention what you enjoyed most</li>
+                  <li>Include photos references if possible</li>
+                  <li>Help others make decisions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- My Uploads Tab -->
+        <section id="myUploadsTab" class="user-tab-content">
+          <div class="container">
+            <h3>My Contributions</h3>
+            
+            <div class="user-panel-full">
+              <div class="uploads-section">
+                <h4>📷 My Uploaded Photos</h4>
+                <div id="userPhotosList" class="user-items-list">
+                  <p class="no-items">No photos uploaded yet</p>
+                </div>
+              </div>
+
+              <div class="uploads-section">
+                <h4>⭐ My Reviews</h4>
+                <div id="userReviewsList" class="user-items-list">
+                  <p class="no-items">No reviews submitted yet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Adventure Horizons BD. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="user.js"></script>
+  </body>
+</html>
